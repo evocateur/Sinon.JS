@@ -26,10 +26,9 @@ def add_license(file, version)
  * #{File.read("LICENSE").split("\n").join("\n * ")}
  */
 
-"use strict";
 PREAMBLE
-
-    f.puts(contents.gsub("\"use strict\";\n", ""))
+    # don't "use strict;" globally, keep function-scoped usage
+    # f.puts(contents.gsub("\"use strict\";\n", ""))
   end
 end
 
